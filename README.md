@@ -27,7 +27,7 @@ https://github.com/pppscn/SmsForwarder
 ### 3.发送通道-修改Socket tcp配置
 
 需要手机与电脑在同一局域网下，修改服务端ip为电脑自己的局域网ip
-
+![img.png](README.assets/img4.png)
 
 **A.将代码clone到本地部署运行**
 
@@ -35,7 +35,7 @@ clone项目
 
 ```bash
 git clone git@github.com:ddonano/SMSOTPServer.git
-cd SMS
+cd SMSOTPServer
 ```
 
 安装依赖
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-打包成exe
+打包成exe启动
 
 ```bash
 pyinstaller -F --add-data "config.json;." --add-data "favicon.ico;." --icon="favicon.ico" --name="SMSOTPServer" main.py
