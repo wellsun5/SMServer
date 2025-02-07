@@ -10,7 +10,7 @@
 
 
 
-## 实现步骤
+## 安装使用步骤
 
 ### 1.安装SmsForwarder
 
@@ -29,7 +29,15 @@ https://github.com/pppscn/SmsForwarder
 需要手机与电脑在同一局域网下，修改服务端ip为电脑自己的局域网ip
 ![img.png](README.assets/img4.png)
 
-**A.将代码clone到本地部署运行**
+### 4.下载SMSOTPServer.exe点击启动
+
+
+### 5. 找个验证码网页开始测试
+
+
+## 如何编译打包工程
+
+**将代码clone到本地部署运行**
 
 clone项目
 
