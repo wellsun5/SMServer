@@ -1,4 +1,4 @@
-# 电脑接短信--实现短信验证码自动在PC端同步
+# 电脑接短信电话--实现短信验证码、来电提醒自动在PC端同步
 
 ## 效果展示
 
@@ -12,27 +12,21 @@
 
 ## 实现步骤
 
-### 1.安装短信转发器SmsForwarder
+### 1.安装SmsForwarder
 
 在安卓手机上安装短信转发器SmsForwarder
 https://github.com/pppscn/SmsForwarder
 
-### 2.SmsForwarder配置
-注意！一般手机都默认开启了验证码安全保护，需要在设置里面搜索验证码进行关闭。
+### 2.SmsForwarder配置导入，通用设置开关要重新关闭打开一次
+将[SmsForwarder.json](SmsForwarder.json)放在
+/storage/emulated/0/Download目录下，点击导入开始导入
+![img.png](README.assets/img3.png)
+![img.png](README.assets/img.png)
+![img.png](README.assets/img2.png)
 
-SmsForwarder基础配置参考官方wikihttps://gitee.com/pp/SmsForwarder/wikis/pages
+### 3.发送通道-修改Socket tcp配置
 
-**pushplus配置参考**
-
-博客：https://www.amjun.com/485.html
-
-视频：https://www.youtube.com/watch?v=Bkt6QpkoVfw&t=272s
-
-
-
-### 3.Socket配置
-
-需要手机与电脑在同一局域网下
+需要手机与电脑在同一局域网下，修改服务端ip为电脑自己的局域网ip
 
 
 **A.将代码clone到本地部署运行**
@@ -40,7 +34,7 @@ SmsForwarder基础配置参考官方wikihttps://gitee.com/pp/SmsForwarder/wikis/
 clone项目
 
 ```bash
-git clone git@github.com:lzhdelife/SMS.git
+git clone git@github.com:ddonano/SMSOTPServer.git
 cd SMS
 ```
 
@@ -50,19 +44,21 @@ cd SMS
 pip install -r requirements.txt
 ```
 
-运行`main.py`
+运行`main.py`,修改端口号 加启动参数 -p {port}
 
 ```bash
 python main.py
 ```
 
+打包成exe
 
-
-**B.发送通道配置如下**
-
-端口写65432，程序中socket接收端口设置为了65432，可以在`config.json`文件中修改
-
-<img src="README.assets/image-20240812230315063.png" alt="image-20240812230315063" style="zoom: 33%;" />
+```bash
+pyinstaller -F --add-data "config.json;." --add-data "favicon.ico;." --icon="favicon.ico" --name="SMSOTPServer" main.py
+```
+启动,直接点击exe打开即可，或者在cmd命令行里修改端口号启动 
+```bash
+SMSOTPServer.exe -p 65431
+```
 
 
 

@@ -1,2 +1,3 @@
-win10toast
+winotify
 pyperclip
+pyinstaller
