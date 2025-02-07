@@ -30,7 +30,7 @@ https://github.com/pppscn/SmsForwarder
 ![img.png](README.assets/img4.png)
 
 ### 4.下载SMSOTPServer.exe点击启动
-
+https://github.com/ddonano/SMSOTPServer/releases
 
 ### 5. 找个验证码网页开始测试
 
