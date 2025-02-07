@@ -29,7 +29,7 @@ https://github.com/pppscn/SmsForwarder
 需要手机与电脑在同一局域网下，修改服务端ip为电脑自己的局域网ip
 ![img.png](README.assets/img4.png)
 
-### 4.下载SMSOTPServer.exe点击启动
+### 4.下载SMSOTPServer.exe 电脑上点击启动
 https://github.com/ddonano/SMSOTPServer/releases
 
 ### 5. 找个验证码网页开始测试
