@@ -31,6 +31,8 @@ https://github.com/pppscn/SmsForwarder
 
 ### 4.下载SMSOTPServer.exe 电脑上点击启动
 https://github.com/ddonano/SMSOTPServer/releases
+![image](https://github.com/user-attachments/assets/0be44a1d-ddc7-4812-bb08-182add39778b)
+
 
 ### 5. 找个验证码网页开始测试
 
