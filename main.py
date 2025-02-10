@@ -43,12 +43,12 @@ def receive_message(port):
             text = text.strip()
             if text.startswith('{') and text.endswith('}'):
                 text = text[1:-1]
+                logging.info(f"text data: {text}")
             # 正则表达式匹配 . 前面的部分
-            match = re.match(r'([A-Za-z]+)\.(\S+)', text)  # \S+ 匹配所有非空白字符
+            match = split_string_at_first_dot(text)
 
             if match:
-                prefix = match.group(1)  # 提取 . 前的部分
-                suffix = match.group(2)  # 提取 . 后的部分
+                prefix, suffix = match  # 提取 . 前的部分
                 if prefix == 'CALL':
                     # 处理 CALL 的情况
                     utils.caller_handler(suffix)
@@ -65,6 +65,25 @@ def receive_message(port):
         except Exception as e:
             logging.error(f"Error handling client connection: {e}")
             continue
+
+
+def split_string_at_first_dot(text):
+    """
+    分割字符串，以第一个"."为界限。
+
+    Args:
+        text: 输入字符串。
+
+    Returns:
+        一个包含两个子字符串的元组，或者 None 如果字符串中没有"."。
+    """
+    if "." not in text:
+        return None  # 或者抛出异常，取决于你的需求
+
+    index = text.find(".")
+    before_dot = text[:index]
+    after_dot = text[index + 1:]
+    return before_dot, after_dot
 
 
 def get_config_path():
