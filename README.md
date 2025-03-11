@@ -54,7 +54,7 @@ cd SMSOTPServer
 pip install -r requirements.txt
 ```
 
-运行`main.py`,修改端口号 加启动参数 -p {port}
+运行`main.py`,如果需要修改端口号 加启动参数 -p {port}
 
 ```bash
 python main.py
