@@ -69,6 +69,9 @@ pyinstaller -F --add-data "config.json;." --add-data "favicon.ico;." --icon="fav
 ```bash
 SMSOTPServer.exe -p 65431
 ```
+加入windows自启动，创建SMSOTPServer.exe 快捷方式，按win+R 输入shell:startup执行， 在打开的文件夹里拖入刚创建的快捷方式即可。
+
+
 
 
 
