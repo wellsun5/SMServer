@@ -3,10 +3,10 @@
 ## 效果展示
 
 收到验证码后，自动拦截短信发送到电脑端，在电脑右下角有托盘消息提示，并自动复制到Windows剪贴板中，直接粘贴就可以。
+![image](https://github.com/user-attachments/assets/88a51b44-0077-484e-968f-5a383ba102fd)
 
-![image-20240812233032541](README.assets/image-20240812233032541.png)
+![image](https://github.com/user-attachments/assets/586f9608-cd40-40ed-9a6a-9e40d60b54bd)
 
-![image-20240812233253703](README.assets/image-20240812233253703.png)
 
 
 
