@@ -1,4 +1,5 @@
 # 电脑接短信电话--实现短信验证码、来电提醒自动在PC端同步
+注：本版本为SMSOPTServer的更新版，与SmsForwarder3.3.3适配。
 
 ## 效果展示
 
@@ -7,7 +8,7 @@
 
 ![image](https://github.com/user-attachments/assets/586f9608-cd40-40ed-9a6a-9e40d60b54bd)
 
-
+同时其他应用的通知也会显示在终端里。
 
 
 ## 安装使用步骤
@@ -18,11 +19,7 @@
 https://github.com/pppscn/SmsForwarder
 
 ### 2.SmsForwarder配置导入，通用设置开关要重新关闭打开一次
-将[SmsForwarder.json](SmsForwarder.json)放在
-/storage/emulated/0/Download目录下，点击导入开始导入
-![img.png](README.assets/img3.png)
-![img.png](README.assets/img.png)
-![img.png](README.assets/img2.png)
+经简化，不需要导入SmsForwarder.json了，只需记得SmsForwarder的通用设置里面要打开转发应用通知，允许获取应用列表，允许后台运行。
 
 ### 3.发送通道-修改Socket tcp配置
 
@@ -30,7 +27,7 @@ https://github.com/pppscn/SmsForwarder
 ![img.png](README.assets/img4.png)
 
 ### 4.下载SMSOTPServer.exe 电脑上点击启动
-https://github.com/ddonano/SMSOTPServer/releases
+https://github.com/wellsun5/SMServer/releases
 ![image](https://github.com/user-attachments/assets/0be44a1d-ddc7-4812-bb08-182add39778b)
 
 
@@ -44,8 +41,8 @@ https://github.com/ddonano/SMSOTPServer/releases
 clone项目
 
 ```bash
-git clone git@github.com:ddonano/SMSOTPServer.git
-cd SMSOTPServer
+git clone git@github.com:wellsun5/SMServer.git
+cd SMServer
 ```
 
 安装依赖
@@ -63,13 +60,13 @@ python main.py
 打包成exe启动
 
 ```bash
-pyinstaller -F --add-data "config.json;." --add-data "favicon.ico;." --icon="favicon.ico" --name="SMSOTPServer" main.py
+pyinstaller -F --add-data "config.json;." --add-data "favicon.ico;." --icon="favicon.ico" --name="SMServer" main.py
 ```
 启动,直接点击exe打开即可，或者在cmd命令行里修改端口号启动 
 ```bash
-SMSOTPServer.exe -p 65431
+SMServer.exe -p 23456
 ```
-加入windows自启动，创建SMSOTPServer.exe 快捷方式，按win+R 输入shell:startup执行， 在打开的文件夹里拖入刚创建的快捷方式即可。
+加入windows自启动，创建SMServer.exe 快捷方式，按win+R 输入shell:startup执行， 在打开的文件夹里拖入刚创建的快捷方式即可。
 
 
 
