@@ -4,7 +4,7 @@
 ## 效果展示
 
 收到验证码后，自动拦截短信发送到电脑端，在电脑右下角有托盘消息提示，并自动复制到Windows剪贴板中，直接粘贴就可以。
-![image](README.assets/aaa.png)
+![image](README.assets/effect.png)
 
 
 同时其他应用的通知也会显示在终端里。
@@ -33,7 +33,14 @@ https://github.com/pppscn/SmsForwarder
 ### 3.发送通道-修改Socket tcp配置
 
 需要手机与电脑在同一局域网下，修改服务端ip为电脑自己的局域网ip
-![img.png](README.assets/img4.png)
+![img.png](README.assets/socket.png)
+
+### 4.发送规则
+
+不用怎么修改，就默认匹配字段选全部就行了，记住是选应用的转发规则。
+![img.png](README.assets/rule1.jpg)
+![img.png](README.assets/rule2.jpg)
+
 
 ### 4.下载SMServer.exe 电脑上点击启动
 https://github.com/wellsun5/SMServer/releases

@@ -140,7 +140,7 @@ def main():
 
 def extract_code(text):
     # 匹配长度等于6的数字字符串
-    pattern = r'验证码[\s\S]{0,2}(\d{4}|\d{6})'
+    pattern = r'验证码[\D]{0,4}?(\d{4,6})'
     match = re.search(pattern, text)
     if match:
         return match.group(1)
