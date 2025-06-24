@@ -17,7 +17,7 @@
 在安卓手机上安装短信转发器SmsForwarder
 https://github.com/pppscn/SmsForwarder
 
-### 2.SmsForwarder配置导入，通用设置开关要重新关闭打开一次
+### 2.设置SmsForwarder的通用设置
 经简化，不需要导入SmsForwarder.json了，只需记得SmsForwarder的通用设置里面要打开转发应用通知，允许获取应用列表，允许后台运行。另外转发信息模板最好改为下面格式：
 ```
 {{PACKAGE_NAME}}
