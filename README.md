@@ -42,12 +42,12 @@ https://github.com/pppscn/SmsForwarder
 ![img.png](README.assets/rule2.jpg)
 
 
-### 4.下载SMServer.exe 电脑上点击启动
+### 5.下载SMServer.exe 电脑上点击启动
 https://github.com/wellsun5/SMServer/releases
 
 
 
-### 5. 找个验证码网页开始测试
+### 6. 找个验证码网页开始测试
 
 
 ## 如何编译打包工程
